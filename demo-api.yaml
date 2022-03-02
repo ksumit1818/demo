@@ -1,11 +1,24 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: demo
-  description: An example deployment of a Backstage application.
   annotations:
-    github.com/project-slug: backstage/demo
+    backstage.io/techdocs-ref: url:https://code.gitlab.prod.us-west-2.tlz.svbank.com/nmalviya/backstage/-/blob/master/index.md
+  name: credit-card-service
+  description: something
+  links: 
+    - url: https://bitbucket.corp.svbank.com/projects/EIS/repos/ofx-gatewayservice/browse
+      title: bitbucket Repo
+      icon: bitbucket
+  tags:
+    - rest
+    - credit-card-service
 spec:
-  type: website
-  owner: backstage/maintainers
-  lifecycle: experimental
+  tags:
+    - rest
+    - credit-card-service
+  system: eis-ms
+  type: service
+  lifecycle: uat
+  owner: team-ms
+  providesApis:
+    - credit-card-service
